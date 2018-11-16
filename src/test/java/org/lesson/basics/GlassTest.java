@@ -7,23 +7,18 @@ public class GlassTest {
 
     @Test
     public void shouldfellGlasWhifAmontOfWeatherSmolerThenGlassVoliumLimit() {
-
         // given
         Glass glass = new Glass(1.00);
 
         // when
-
         glass.fillIn(0.50);
-
 
         // then
         Assert.assertEquals(0.50, glass.getCurrenVolium(), 0.01);
-
     }
 
     @Test
     public void shouldThrowIllegalArgumentExeptuionWhenAmoundIsNegative() {
-
         // given
         Glass glass = new Glass(1.00);
 
@@ -69,7 +64,6 @@ public class GlassTest {
 
     @Test
     public void shouldThrowIllegalArgumentExceptionWhenamountOFWeatherIsBeegerThenGlassVoliumLimit() {
-
         // given
         Glass glass = new Glass(1.00);
 
@@ -81,7 +75,6 @@ public class GlassTest {
             // then
             Assert.assertEquals("To Much Liquide", exception.getMessage());// metoda statyczna
             Assert.assertEquals(0, glass.getCurrenVolium(), 0.01);
-
         }
 
     }
@@ -120,7 +113,6 @@ public class GlassTest {
 
         //then
         Assert.assertEquals(1, glass.getCurrenVolium(), 0.01);
-
     }
 
     @Test// przypadek wylewamy więcej niż jest
