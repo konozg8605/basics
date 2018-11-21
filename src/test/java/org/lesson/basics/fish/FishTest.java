@@ -60,23 +60,4 @@ public class FishTest {
 
     }
 
-    @Test
-    public void shouldFeedThemAll() {
-        // given
-        FishFarm rzd = new FishFarm;
-        double foodAmountPerFarm = 5;
-
-        Fish[] fishs = new Fish[5];
-        fishs[0] = new Fish(1, 1, "carp");
-        fishs[1] = new Fish(2, 2, "carp");
-        fishs[2] = new Fish(3, 3, "grass carp");
-        fishs[3] = new Fish(4, 4, "carp");
-        fishs[4] = new Fish(5, 5, "carp");
-
-        // when
-        rzd.feedThemAll2(foodAmountPerFarm);
-        // then
-
-
-    }
 }
