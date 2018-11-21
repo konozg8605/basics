@@ -75,6 +75,7 @@ public class FishTest {
 
         // when
         rzd.feedThemAll2(foodAmountPerFarm);
+        // then
 
 
     }
