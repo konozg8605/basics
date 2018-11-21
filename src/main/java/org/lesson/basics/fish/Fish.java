@@ -16,10 +16,10 @@ public class Fish {// 2 pola masa i współczynnik wzostu, metoda karmienie para
     }
 
     public void feeding(double amountOFFood) {
-        if(amountOFFood >= 3 * weight){
+        if (amountOFFood >= 3 * this.weight) {
             throw new IllegalArgumentException("Za dużo paszy " + this.toString() + " Dostał " + amountOFFood);// wyjątek nowy wyjątki śą obiektami
         }
-        weight = weight + (amountOFFood / growthFactor);
+        this.weight = this.weight + (amountOFFood / this.growthFactor);
     }
 
     public double getWeight() {

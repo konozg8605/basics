@@ -1,5 +1,6 @@
 package org.lesson.basics.fish;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class FishFarmTest {
@@ -7,7 +8,7 @@ public class FishFarmTest {
     @Test
     public void shouldFeedThemAll() {
         // given
-        double foodAmountPerFarm = 5;
+        double foodAmountPerFarm = 15;
 
         Fish[] fishs = new Fish[5];
         fishs[0] = new Fish(1, 1, "carp");
@@ -16,14 +17,20 @@ public class FishFarmTest {
         fishs[3] = new Fish(4, 4, "carp");
         fishs[4] = new Fish(5, 5, "carp");
 
-        FishFarm farm = new FishFarm; //nie kompiluje sie!!!!!!!!!!
+        FishFarm farm = new FishFarm(fishs);
 
         // when
-        farm.feedThemAll2(foodAmountPerFarm);
+        farm.feedThemAll(foodAmountPerFarm);
 
         // then
-        // gdzie sa assercje pobierz wszystkie ryby i dla kazdej sprawdz mase po karmieniu
+        Assert.assertEquals(2.0, fishs[0].getWeight(), 0.01);
+        Assert.assertEquals(2.0, farm.getFishs()[0].getWeight(), 0.01);
+        Assert.assertEquals(4.0, farm.getFishs()[1].getWeight(), 0.01);
 
+        System.out.println(" F: " + fishs);
+        System.out.println(" G: " + farm.getFishs());
+        // gdzie sa assercje pobierz wszystkie ryby i dla kazdej sprawdz mase po karmieniu
+// zdebagowac dlaczego jest bład i dlaczego jest 3 a ma byc 4
     }
 
 }
