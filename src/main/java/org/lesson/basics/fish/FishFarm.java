@@ -10,8 +10,10 @@ public class FishFarm {
     }
 
     public void feedThemAll(double foodAmoundPerFarm) {
+        if (foodAmoundPerFarm < 0) {
+            throw new IllegalArgumentException("Amount of food has to be positive");
+        }
         double sumeWeightOfFishs = this.sumeWeightOfFishs();
-
         for (int i = 0; i < fishs.length; i = i + 1) {// pętla ma 3 składowe: licznik- najczęściej zmienna typu int i nazywa się i, warunek,indykator przesuniecia
             Fish fish = fishs[i];
             double foodAmoundPerFish = fish.getWeight() / sumeWeightOfFishs * foodAmoundPerFarm;
