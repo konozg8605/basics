@@ -25,7 +25,10 @@ public class FishFarmTest {
         // then
         Assert.assertEquals(2.0, fishs[0].getWeight(), 0.01);
         Assert.assertEquals(2.0, farm.getFishs()[0].getWeight(), 0.01);
-        Assert.assertEquals(4.0, farm.getFishs()[1].getWeight(), 0.01);
+        Assert.assertEquals(3.0, farm.getFishs()[1].getWeight(), 0.01);
+        Assert.assertEquals(4.0, farm.getFishs()[2].getWeight(), 0.01);
+        Assert.assertEquals(5.0, farm.getFishs()[3].getWeight(), 0.01);
+        Assert.assertEquals(6.0, farm.getFishs()[4].getWeight(), 0.01);
 
         System.out.println(" F: " + fishs);
         System.out.println(" G: " + farm.getFishs());
