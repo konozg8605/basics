@@ -33,4 +33,25 @@ public class FishFarmTest {
 // zdebagowac dlaczego jest bład i dlaczego jest 3 a ma byc 4
     }
 
+    @Test
+    public void shouldThrowsExceptionWhenGivenAmountOfFoodIsNegative() {
+        // given
+        double foodAmountPerFarm = - 15;
+
+        Fish[] fishs = new Fish[5];
+        fishs[0] = new Fish(1, 1, "carp");
+    
+        FishFarm farm = new FishFarm(fishs);
+        
+        // when
+        try {
+            farm.feedThemAll(foodAmountPerFarm);
+        } catch (IllegalArgumentException exception) {   
+
+        // then
+            Assert.assertEquals(1.0, fishs[0].getWeight(), 0.01);
+            Assert.assertEquals("Amount of food has to be positive", exception.getMessage());
+        }
+
+    }
 }
