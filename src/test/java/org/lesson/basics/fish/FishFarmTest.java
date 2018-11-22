@@ -49,6 +49,7 @@ public class FishFarmTest {
         // when
         try {
             farm.feedThemAll(foodAmountPerFarm);
+             Assert.fail("IllegalArgumentException was not thrown");
         } catch (IllegalArgumentException exception) {   
 
         // then
